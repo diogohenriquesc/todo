@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --main-background: #121212;
+  --main-fc: #F0EDEE;
+}
+
+body[data-theme="light"] {
+  --main-background: #F0EDEE;
+  --main-fc: #121212;
+}
+
+*,
+*::before,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  background: var(--main-background);
+  color: var(--main-fc);
+}
+
+.container {
+  max-width: 31.25rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-inline: 1rem;
+}
+
+.todo__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo__title {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 3rem;
+}
+
+.todo__theme-toggler {
+  background: none;
+  color: var(--main-fc);
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.todo {
+  margin-top: 2rem;
+}
+
+.todo__form {
+  background-color: white;
+}
+
+.todo__form form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__text-input {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.todo__add-input {
+  padding: 0 1.2rem;
+  border: none;
+  background-color: #53DD6C;
+  font-weight: 700;
+  outline: .3125rem solid #53DD6C;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.todo__add-input:active {
+  outline-width: .5rem;
+  font-size: 1.2rem;
+}
+
+.todo__list {
+  list-style: none;
+  margin-top: 3rem;
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  border-radius: .4rem;
+}
+
+.todo__item+.todo__item {
+  margin-top: .8rem;
+}
+
+.todo__item-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.todo__edit-button, .todo__delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.todo__edit-button {
+  color: #0075C4;
+}
+
+.todo__delete-button {
+  color: #FE4A49;
+}
